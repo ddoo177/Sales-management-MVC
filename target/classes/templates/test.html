@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/icon.ico">
+    </head>
+    <body>
+        <div th:each = "vegetable : ${data}">
+            <div>
+                <div class="product__item__pic set-bg" data-setbg="images/banana.jpg">
+                    <ul class="product__item__pic__hover">
+                        <li><a href="#"><i class='bx bxs-heart'></i></a></li>
+                        <li><a href="#"><i class='bx bx-repost'></i></a></li>
+                        <li><a href="#"><i class='bx bxs-cart'></i></a></li>
+                    </ul>
+                </div>
+                <div class="product__item__text">
+                    <h6 th:text="${vegetable.Vegetable_Name}">...</h6>
+                    <h5 th:text="${vegetable.Price}">...</h5>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
